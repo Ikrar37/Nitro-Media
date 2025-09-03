@@ -1,0 +1,339 @@
+/* KEYFRAME ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #c8102e;
+  }
+  50% {
+    text-shadow: 0 0 20px #c8102e, 0 0 30px #c8102e;
+  }
+  100% {
+    text-shadow: 0 0 5px #c8102e;
+  }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(200, 16, 46, 0.2);
+  }
+  100% {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* HERO TITLE WITH ENHANCED ANIMATIONS */
+.services-hero {
+  background: url('/image/bg\ home.png') center/cover no-repeat;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background overlay */
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shine 4s ease-in-out infinite;
+}
+
+.services-hero h1 {
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out, glow 3s ease-in-out infinite alternate;
+  background: linear-gradient(45deg, #fff, #c8102e, #fff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease-out, gradientShift 3s ease infinite;
+}
+
+/* SERVICES CONTAINER WITH STAGGER ANIMATION */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  color: #000;
+  gap: 30px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+/* SERVICE BOX WITH AMAZING ANIMATIONS */
+.service-box {
+  flex: 1 1 350px;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  padding: 40px 30px;
+  margin: 10px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Stagger animation for each box */
+.service-box:nth-child(1) {
+  animation: slideInFromBottom 0.8s ease-out 0.6s forwards;
+}
+
+.service-box:nth-child(2) {
+  animation: slideInFromBottom 0.8s ease-out 0.8s forwards;
+}
+
+.service-box:nth-child(3) {
+  animation: slideInFromBottom 0.8s ease-out 1.0s forwards;
+}
+
+/* Floating animation after load */
+.service-box:nth-child(1) {
+  animation: slideInFromBottom 0.8s ease-out 0.6s forwards, cardFloat 4s ease-in-out 1.5s infinite;
+}
+
+.service-box:nth-child(2) {
+  animation: slideInFromBottom 0.8s ease-out 0.8s forwards, cardFloat 4s ease-in-out 1.7s infinite;
+}
+
+.service-box:nth-child(3) {
+  animation: slideInFromBottom 0.8s ease-out 1.0s forwards, cardFloat 4s ease-in-out 1.9s infinite;
+}
+
+/* Hover effects */
+.service-box:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(200, 16, 46, 0.2);
+  border-color: #c8102e;
+  background: linear-gradient(135deg, #fff 0%, #fff8f8 100%);
+}
+
+/* Animated border on hover */
+.service-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg, #c8102e, #ff4d6d, #c8102e);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: subtract;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-box:hover::before {
+  opacity: 1;
+}
+
+/* SERVICE BOX HEADING ANIMATIONS */
+.service-box h2 {
+  color: #c8102e;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.service-box h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c8102e, transparent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.service-box:hover h2 {
+  transform: translateY(-5px);
+  text-shadow: 0 0 10px rgba(200, 16, 46, 0.3);
+}
+
+.service-box:hover h2::after {
+  width: 80%;
+}
+
+/* SERVICE BOX PARAGRAPH ANIMATIONS */
+.service-box p {
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.8;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-box:hover p {
+  color: #333;
+  transform: translateY(5px);
+}
+
+/* Loading animation */
+@keyframes loading {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reset default browser style with smooth scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  will-change: transform, opacity;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Flexbox layout preserved */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Additional cool effects */
+.service-box {
+  cursor: pointer;
+}
+
+.service-box:active {
+  transform: translateY(-10px) scale(0.98);
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+  .services-hero h1 {
+    font-size: 40px;
+  }
+  
+  .services-container {
+    padding: 40px 20px;
+  }
+  
+  .service-box {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  .service-box:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+/* Performance optimizations */
+.service-box {
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Preload animations */
+.services-container,
+.service-box {
+  animation-fill-mode: both;
+}

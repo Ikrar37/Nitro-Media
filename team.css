@@ -1,0 +1,426 @@
+/* KEYFRAME ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(50px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+  70% {
+    transform: scale(0.9) translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #c8102e;
+  }
+  50% {
+    text-shadow: 0 0 20px #c8102e, 0 0 30px #c8102e;
+  }
+  100% {
+    text-shadow: 0 0 5px #c8102e;
+  }
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes photoZoom {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardPulse {
+  0% {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  50% {
+    box-shadow: 0 8px 25px rgba(200, 16, 46, 0.15);
+  }
+  100% {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+}
+
+/* HERO TITLE WITH ENHANCED ANIMATIONS */
+.team-hero {
+  background: url('/image/bg home.png') center/cover no-repeat;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background overlay */
+.team-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: shine 4s ease-in-out infinite;
+}
+
+.team-hero h1 {
+  color: #fff;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-family: 'Bebas Neue', sans-serif;
+  position: relative;
+  z-index: 2;
+  animation: bounceIn 1.2s ease-out, glow 3s ease-in-out infinite alternate;
+  background: linear-gradient(45deg, #fff, #c8102e, #fff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: bounceIn 1.2s ease-out, gradientShift 3s ease infinite;
+}
+
+/* TEAM CONTAINER WITH STAGGER ANIMATION */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  gap: 30px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+/* TEAM CARD WITH AMAZING ANIMATIONS */
+.team-card {
+  background: linear-gradient(135deg, #fff 0%, #fafafa 100%);
+  color: #000;
+  width: 320px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  cursor: pointer;
+  will-change: transform, box-shadow;
+}
+
+/* Stagger animation for each card */
+.team-card:nth-child(1) {
+  animation: slideInScale 0.8s ease-out 0.5s forwards, cardFloat 4s ease-in-out 1.3s infinite;
+}
+
+.team-card:nth-child(2) {
+  animation: slideInScale 0.8s ease-out 0.7s forwards, cardFloat 4s ease-in-out 1.5s infinite;
+}
+
+.team-card:nth-child(3) {
+  animation: slideInScale 0.8s ease-out 0.9s forwards, cardFloat 4s ease-in-out 1.7s infinite;
+}
+
+.team-card:nth-child(4) {
+  animation: slideInScale 0.8s ease-out 1.1s forwards, cardFloat 4s ease-in-out 1.9s infinite;
+}
+
+.team-card:nth-child(5) {
+  animation: slideInScale 0.8s ease-out 1.3s forwards, cardFloat 4s ease-in-out 2.1s infinite;
+}
+
+.team-card:nth-child(6) {
+  animation: slideInScale 0.8s ease-out 1.5s forwards, cardFloat 4s ease-in-out 2.3s infinite;
+}
+
+/* Hover effects */
+.team-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(200, 16, 46, 0.2);
+  border-color: #c8102e;
+  background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+}
+
+/* Animated border on hover */
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg, #c8102e, #ff4d6d, #c8102e);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: subtract;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+/* FOTO BULAT WITH COOL ANIMATIONS */
+.team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  display: block;
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+  position: relative;
+  opacity: 0;
+  animation: photoZoom 0.8s ease-out 0.2s forwards;
+}
+
+.team-card:hover img {
+  transform: scale(1.1) rotate(5deg);
+  border-color: #c8102e;
+  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.3);
+}
+
+/* Glowing ring around photo */
+.team-card img::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #c8102e, #ff4d6d, #c8102e);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover img::before {
+  opacity: 1;
+}
+
+/* INFO TEAM WITH TEXT ANIMATIONS */
+.team-info h2 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #c8102e;
+  opacity: 0;
+  animation: textReveal 0.6s ease-out 0.4s forwards;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c8102e, transparent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.team-card:hover .team-info h2 {
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(200, 16, 46, 0.3);
+}
+
+.team-card:hover .team-info h2::after {
+  width: 100%;
+}
+
+.team-info h3 {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #333;
+  opacity: 0;
+  animation: textReveal 0.6s ease-out 0.5s forwards;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .team-info h3 {
+  color: #c8102e;
+  transform: translateY(-2px);
+}
+
+.team-info p {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #555;
+  opacity: 0;
+  animation: textReveal 0.6s ease-out 0.6s forwards;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .team-info p {
+  color: #333;
+  transform: translateY(2px);
+}
+
+/* Active state animation */
+.team-card:active {
+  transform: translateY(-10px) scale(1.01);
+}
+
+/* Pulse animation for cards */
+.team-card {
+  animation-name: slideInScale, cardPulse;
+  animation-duration: 0.8s, 6s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-delay: 0.5s, 2s;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+}
+
+/* Reset default browser style with smooth scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  will-change: transform, opacity;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+  .team-hero h1 {
+    font-size: 40px;
+  }
+  
+  .team-container {
+    padding: 40px 20px;
+  }
+  
+  .team-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+  
+  .team-card img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-card:hover img {
+    transform: scale(1.05) rotate(3deg);
+  }
+}
+
+/* Performance optimizations */
+.team-card {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Loading state */
+.team-container {
+  animation-fill-mode: both;
+}
+
+/* Special effects for team photos */
+.team-card img {
+  filter: grayscale(20%) brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+.team-card:hover img {
+  filter: grayscale(0%) brightness(1.2) contrast(1.1);
+}
