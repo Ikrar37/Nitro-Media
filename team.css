@@ -1,3 +1,83 @@
+/* Reset default browser style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  will-change: transform, opacity;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* HEADER STYLES */
+header {
+  background: #000;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.logo {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #c8102e;
+}
+
+.logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
 /* KEYFRAME ANIMATIONS */
 @keyframes fadeInUp {
   from {
@@ -139,7 +219,6 @@
   font-family: 'Bebas Neue', sans-serif;
   position: relative;
   z-index: 2;
-  animation: bounceIn 1.2s ease-out, glow 3s ease-in-out infinite alternate;
   background: linear-gradient(45deg, #fff, #c8102e, #fff);
   background-size: 200% 200%;
   -webkit-background-clip: text;
@@ -257,27 +336,6 @@
   box-shadow: 0 8px 20px rgba(200, 16, 46, 0.3);
 }
 
-/* Glowing ring around photo */
-.team-card img::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, #c8102e, #ff4d6d, #c8102e);
-  background-size: 200% 200%;
-  animation: gradientShift 3s ease infinite;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.team-card:hover img::before {
-  opacity: 1;
-}
-
 /* INFO TEAM WITH TEXT ANIMATIONS */
 .team-info h2 {
   margin: 10px 0 5px;
@@ -332,7 +390,7 @@
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  color: #555;
+  color: 555;
   opacity: 0;
   animation: textReveal 0.6s ease-out 0.6s forwards;
   transition: all 0.3s ease;
@@ -343,51 +401,137 @@
   transform: translateY(2px);
 }
 
-/* Active state animation */
-.team-card:active {
-  transform: translateY(-10px) scale(1.01);
+/* FOOTER STYLES */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+footer img {
+  max-width: 160px;
+  margin-bottom: 10px;
+}
+footer p {
+  margin: 5px 0;
+  font-family: 'Poppins', sans-serif;
+}
+.footer-left {
+  flex: 1;
+}
+.footer-right {
+  flex: 1;
+  text-align: right;
 }
 
-/* Pulse animation for cards */
-.team-card {
-  animation-name: slideInScale, cardPulse;
-  animation-duration: 0.8s, 6s;
-  animation-timing-function: ease-out, ease-in-out;
-  animation-delay: 0.5s, 2s;
-  animation-iteration-count: 1, infinite;
-  animation-fill-mode: forwards, none;
+/* Biar main content dorong footer ke bawah */
+main {
+  flex: 1;
 }
 
-/* Reset default browser style with smooth scrolling */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  will-change: transform, opacity;
+/* Footer tetap di bawah */
+footer {
+  margin-top: auto;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
+/* ===== MEDIA QUERIES UNTUK RESPONSIVITAS ===== */
 
-/* Responsive animations */
-@media (max-width: 768px) {
+/* Tablet (lebar maksimal 1024px) */
+@media (max-width: 1024px) {
   .team-hero h1 {
     font-size: 40px;
   }
   
   .team-container {
+    padding: 50px 30px;
+  }
+  
+  .nav-left, .nav-right {
+    gap: 20px;
+  }
+}
+
+/* Mobile (lebar maksimal 768px) */
+@media (max-width: 768px) {
+  /* Header dan Navigasi */
+  .nav-left, .nav-right {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    gap: 0;
+  }
+  
+  .nav-left.active, .nav-right.active {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+  
+  .nav-left {
+    top: 70px;
+  }
+  
+  .nav-right {
+    top: 220px;
+  }
+  
+  .navbar a {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Tombol Burger */
+  .burger-menu {
+    display: block;
+  }
+  
+  /* Atur ulang tata letak navbar untuk mobile */
+  .navbar {
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin: 0;
+    order: -1;
+  }
+  
+  .nav-left, .nav-right {
+    flex: none;
+  }
+  
+  /* Hero Section */
+  .team-hero {
+    padding: 60px 20px;
+  }
+  
+  .team-hero h1 {
+    font-size: 36px;
+  }
+  
+  /* Team Container */
+  .team-container {
     padding: 40px 20px;
+    gap: 20px;
   }
   
   .team-card {
     width: 100%;
     max-width: 350px;
     margin: 10px 0;
+    padding: 20px 15px;
   }
   
   .team-card:hover {
@@ -401,6 +545,86 @@ html, body {
   
   .team-card:hover img {
     transform: scale(1.05) rotate(3deg);
+  }
+  
+  .team-info h2 {
+    font-size: 20px;
+  }
+  
+  .team-info h3 {
+    font-size: 15px;
+  }
+  
+  .team-info p {
+    font-size: 13px;
+  }
+  
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  
+  .footer-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-center {
+    margin: 15px 0;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Mobile Kecil (lebar maksimal 480px) */
+@media (max-width: 480px) {
+  .team-hero h1 {
+    font-size: 32px;
+  }
+  
+  .team-container {
+    padding: 30px 15px;
+  }
+  
+  .team-card {
+    padding: 15px 10px;
+  }
+  
+  .team-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .team-info h2 {
+    font-size: 18px;
+  }
+  
+  .team-info h3 {
+    font-size: 14px;
+  }
+  
+  .team-info p {
+    font-size: 12px;
+  }
+  
+  .nav-left, .nav-right {
+    padding: 15px;
+  }
+  
+  .nav-right {
+    top: 210px;
   }
 }
 

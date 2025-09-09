@@ -1,3 +1,90 @@
+/* Reset default browser style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Biar body & html memenuhi layar penuh */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER STYLES */
+header {
+  background: #000;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.logo {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #c8102e;
+}
+
+.logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+}
+
 /* HERO */
 .hero {
   background: url('/image/bg\ home.png') center/cover no-repeat;
@@ -8,12 +95,42 @@
   max-width: 450px;
   margin-bottom: 5px;
   margin-top: -45px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeZoom 1.5s ease forwards;
 }
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .slogan {
   color: #c8102e;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 25px;
   font-weight: bold;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1.5s ease forwards;
+  animation-delay: 1s; /* muncul setelah logo */
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* INTRO */
@@ -33,16 +150,35 @@
   display: inline-block;
   background: #c8102e;
   color: #fff;
-  padding: 6px 16px;      /* dikurangi dari 12px 25px */
+  padding: 6px 16px;
   border-radius: 6px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  font-size: 12px;         /* bisa dikurangi jika terlalu besar */
+  font-size: 12px;
   transition: 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: bounceIn 1s ease forwards;
+  animation-delay: 2s; /* muncul setelah slogan */
 }
 
 .cta:hover {
   background: #a00d24;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* FOOTER */
@@ -72,29 +208,6 @@ footer p {
   text-align: right;
 }
 
-/* Reset default browser style */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Biar body & html memenuhi layar penuh */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Biar main content dorong footer ke bawah */
 main {
   flex: 1;
@@ -105,78 +218,161 @@ footer {
   margin-top: auto;
 }
 
-/* Animasi Logo */
-.hero-logo {
-  max-width: 450px;
-  margin-bottom: 5px;
-  margin-top: -45px;
-  opacity: 0;
-  transform: scale(0.8);
-  animation: fadeZoom 1.5s ease forwards;
-}
+/* ===== MEDIA QUERIES UNTUK RESPONSIVITAS ===== */
 
-@keyframes fadeZoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.8);
+/* Tablet (lebar maksimal 1024px) */
+@media (max-width: 1024px) {
+  .hero-logo {
+    max-width: 350px;
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+  
+  .intro p {
+    font-size: 20px;
+  }
+  
+  .nav-left, .nav-right {
+    gap: 20px;
   }
 }
 
-/* Animasi Slogan */
-.slogan {
-  color: #c8102e;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideUp 1.5s ease forwards;
-  animation-delay: 1s; /* muncul setelah logo */
+/* Mobile (lebar maksimal 768px) */
+@media (max-width: 768px) {
+  /* Header dan Navigasi */
+  .nav-left, .nav-right {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    gap: 0;
+  }
+  
+  .nav-left.active, .nav-right.active {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+  
+  .nav-left {
+    top: 70px;
+  }
+  
+  .nav-right {
+    top: 220px; /* Ditempatkan di bawah nav-left */
+  }
+  
+  .navbar a {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Tombol Burger */
+  .burger-menu {
+    display: block;
+  }
+  
+  /* Atur ulang tata letak navbar untuk mobile */
+  .navbar {
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin: 0;
+    order: -1;
+  }
+  
+  .nav-left, .nav-right {
+    flex: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 80px 20px 40px;
+  }
+  
+  .hero-logo {
+    max-width: 280px;
+    margin-top: -30px;
+  }
+  
+  .slogan {
+    font-size: 20px;
+  }
+  
+  /* Intro Section */
+  .intro {
+    padding: 40px 20px;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  
+  .footer-right {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-center {
+    margin: 15px 0;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
+/* Mobile Kecil (lebar maksimal 480px) */
+@media (max-width: 480px) {
+  .hero-logo {
+    max-width: 220px;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .slogan {
+    font-size: 18px;
   }
-}
-
-/* Animasi CTA (bounce masuk) */
-.cta {
-  display: inline-block;
-  background: #c8102e;
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 6px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  transition: 0.3s;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: bounceIn 1s ease forwards;
-  animation-delay: 2s; /* muncul setelah slogan */
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+  
+  .intro p {
+    font-size: 18px;
   }
-  50% {
-    opacity: 1;
-    transform: translateY(-5px);
+  
+  .cta {
+    padding: 8px 16px;
+    font-size: 14px;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .navbar a {
+    font-size: 14px;
+  }
+  
+  .nav-left, .nav-right {
+    padding: 15px;
+  }
+  
+  .nav-right {
+    top: 210px;
   }
 }
