@@ -3,23 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Nitro Media</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>Tentang Kami - Nitro Media | Visi, Misi & Filosofi Digital Marketing Otomotif</title>
+  <meta name="title" content="Tentang Kami - Nitro Media | Visi, Misi & Filosofi Digital Marketing Otomotif">
+  <meta name="description" content="Pelajari lebih lanjut tentang Nitro Media - filosofi nama, logo, visi misi, dan filosofi kerja agensi digital marketing otomotif terpercaya di Indonesia.">
+  <meta name="keywords" content="tentang nitro media, filosofi nitro media, visi misi digital marketing, agensi otomotif indonesia, filosofi logo nitro media">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nitro Media">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://nitro-media.vercel.app/about.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nitro-media.vercel.app/about.html">
+  <meta property="og:title" content="Tentang Kami - Nitro Media | Visi, Misi & Filosofi Digital Marketing Otomotif">
+  <meta property="og:description" content="Pelajari lebih lanjut tentang filosofi, visi misi, dan nilai-nilai Nitro Media dalam memberikan layanan digital marketing terbaik untuk industri otomotif.">
+  <meta property="og:image" content="https://nitro-media.vercel.app/image/logonitromedia.png">
+  <meta property="og:site_name" content="Nitro Media">
+  <meta property="og:locale" content="id_ID">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nitro-media.vercel.app/about.html">
+  <meta property="twitter:title" content="Tentang Kami - Nitro Media | Visi, Misi & Filosofi Digital Marketing Otomotif">
+  <meta property="twitter:description" content="Pelajari lebih lanjut tentang filosofi, visi misi, dan nilai-nilai Nitro Media dalam memberikan layanan digital marketing terbaik untuk industri otomotif.">
+  <meta property="twitter:image" content="https://nitro-media.vercel.app/image/logonitromedia.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Structured Data - AboutPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Tentang Nitro Media",
+    "description": "Halaman tentang Nitro Media - filosofi, visi, misi, dan nilai-nilai perusahaan",
+    "url": "https://nitro-media.vercel.app/about.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Nitro Media",
+      "description": "Agensi pemasaran digital yang berfokus pada industri otomotif",
+      "foundingDate": "2025",
+      "founder": {
+        "@type": "Person",
+        "name": "Achmad Septian"
+      },
+      "mission": [
+        "Menyediakan solusi digital marketing yang efektif dan terukur",
+        "Membantu bisnis otomotif membangun brand yang kuat di dunia online",
+        "Menggabungkan kreativitas dan teknologi untuk memberikan hasil yang nyata",
+        "Menjadi mitra jangka panjang yang mendukung perkembangan klien"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nitro-media.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://nitro-media.vercel.app/about.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-left">
         <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
+        <a href="about.html" aria-current="page">About Us</a>
         <a href="services.html">Services</a>
       </div>
 
       <div class="logo">
-        <a href="index.html">
-          <img src="/image/logonitromedia.png" alt="Nitro Media Logo">
+        <a href="index.html" aria-label="Nitro Media - Homepage">
+          <img src="/image/logonitromedia.png" alt="Nitro Media Logo" width="120" height="40">
         </a>
       </div>
 
@@ -29,100 +113,114 @@
         <a href="contact.html">Contact</a>
       </div>
       
-      <button class="burger-menu" aria-label="Toggle menu">☰</button>
+      <button class="burger-menu" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </nav>
   </header>
 
-  <!-- ABOUT US -->
-  <section class="section dark align-left">
-    <h1>NITRO MEDIA</h1>
-    <p>
-      Nitro Media adalah agensi pemasaran digital yang berfokus pada industri otomotif. 
-      Kami membantu dealer, bengkel, toko sparepart, hingga komunitas otomotif membangun citra yang kuat 
-      dan menjangkau audiens lebih luas melalui strategi digital yang kreatif dan tepat sasaran. 
-      Dengan pemahaman tentang dunia otomotif dan keahlian digital marketing, 
-      kami menyediakan layanan seperti manajemen media sosial, iklan digital, SEO, 
-      serta pembuatan konten foto dan video yang menarik untuk mendukung pertumbuhan brand klien.
-    </p>
-  </section>
+  <main>
+    <!-- Breadcrumb Navigation
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">About Us</li>
+      </ol>
+    </nav> -->
 
-  <!-- FILOSOFI NAMA -->
-  <section class="section light align-right">
-    <h2>FILOSOFI NAMA</h2>
-    <p>
-      Nama Nitro Media terinspirasi dari dunia otomotif, di mana "Nitro" melambangkan energi, dorongan kuat, 
-      dan kekuatan ekstra untuk mempercepat performa. Dalam konteks digital, Nitro berarti semangat untuk 
-      memberikan tenaga tambahan agar brand klien tumbuh lebih cepat dan kuat. Kata "Media" menegaskan peran 
-      kami sebagai penghubung kreatif yang menyampaikan pesan brand melalui strategi digital yang efektif.
-    </p>
-  </section>
+    <!-- ABOUT US -->
+    <section class="section dark align-left">
+      <h1>NITRO MEDIA</h1>
+      <p>
+        Nitro Media adalah agensi pemasaran digital yang berfokus pada industri otomotif. 
+        Kami membantu dealer, bengkel, toko sparepart, hingga komunitas otomotif membangun citra yang kuat 
+        dan menjangkau audiens lebih luas melalui strategi digital yang kreatif dan tepat sasaran. 
+        Dengan pemahaman tentang dunia otomotif dan keahlian digital marketing, 
+        kami menyediakan layanan seperti manajemen media sosial, iklan digital, SEO, 
+        serta pembuatan konten foto dan video yang menarik untuk mendukung pertumbuhan brand klien.
+      </p>
+    </section>
 
-  <!-- FILOSOFI LOGO -->
-  <section class="section dark">
-    <div class="flex">
-      <div class="text">
-        <h2>FILOSOFI LOGO</h2>
+    <!-- FILOSOFI NAMA -->
+    <section class="section light align-right">
+      <h2>FILOSOFI NAMA</h2>
+      <p>
+        Nama Nitro Media terinspirasi dari dunia otomotif, di mana "Nitro" melambangkan energi, dorongan kuat, 
+        dan kekuatan ekstra untuk mempercepat performa. Dalam konteks digital, Nitro berarti semangat untuk 
+        memberikan tenaga tambahan agar brand klien tumbuh lebih cepat dan kuat. Kata "Media" menegaskan peran 
+        kami sebagai penghubung kreatif yang menyampaikan pesan brand melalui strategi digital yang efektif.
+      </p>
+    </section>
+
+    <!-- FILOSOFI LOGO -->
+    <section class="section dark">
+      <div class="flex">
+        <div class="text">
+          <h2>FILOSOFI LOGO</h2>
+          <p>
+            Logo Nitro Media terdiri dari roda berapi yang merepresentasikan dunia otomotif, pergerakan, dan dinamika. 
+            Api melambangkan semangat, energi, dan kreativitas yang membara dalam setiap strategi pemasaran. 
+            Tipografi "Nitro" dibuat lebih tegas untuk menunjukkan profesionalisme dan kekuatan, 
+            sementara "MEDIA" ditulis dengan huruf kapital tebal sebagai simbol stabilitas dan dominasi di bidang branding. 
+            Warna utama merah, putih, dan hitam dipilih untuk menggambarkan keberanian, kepercayaan, 
+            serta kekuatan visual yang kuat.
+          </p>
+        </div>
+        <div class="image">
+          <img src="/image/logonitromedia.png" alt="Logo Nitro Media - Roda berapi yang melambangkan energi dan dinamika" width="200" height="200">
+        </div>
+      </div>
+    </section>
+
+    <!-- VISI & MISI -->
+    <section class="section light align-center">
+      <h2>VISI & MISI</h2>
+      <article>
+        <h3>Visi</h3>
         <p>
-          Logo Nitro Media terdiri dari roda berapi yang merepresentasikan dunia otomotif, pergerakan, dan dinamika. 
-          Api melambangkan semangat, energi, dan kreativitas yang membara dalam setiap strategi pemasaran. 
-          Tipografi "Nitro" dibuat lebih tegas untuk menunjukkan profesionalisme dan kekuatan, 
-          sementara "MEDIA" ditulis dengan huruf kapital tebal sebagai simbol stabilitas dan dominasi di bidang branding. 
-          Warna utama merah, putih, dan hitam dipilih untuk menggambarkan keberanian, kepercayaan, 
-          serta kekuatan visual yang kuat.
+          Menjadi agensi pemasaran digital otomotif terpercaya yang membantu brand dan bisnis 
+          tumbuh lebih kuat melalui strategi kreatif dan inovatif.
         </p>
-      </div>
-      <div class="image">
-        <img src="/image/logonitromedia.png" alt="Nitro Media Logo">
-      </div>
-    </div>
-  </section>
+      </article>
+      <article>
+        <h3>Misi</h3>
+        <ul>
+          <li>Menyediakan solusi digital marketing yang efektif dan terukur.</li>
+          <li>Membantu bisnis otomotif membangun brand yang kuat di dunia online.</li>
+          <li>Menggabungkan kreativitas dan teknologi untuk memberikan hasil yang nyata.</li>
+          <li>Menjadi mitra jangka panjang yang mendukung perkembangan klien.</li>
+        </ul>
+      </article>
+    </section>
 
-  <!-- VISI & MISI -->
-  <section class="section light align-center">
-    <h2>VISI & MISI</h2>
-    <h3>Visi</h3>
-    <p>
-      Menjadi agensi pemasaran digital otomotif terpercaya yang membantu brand dan bisnis 
-      tumbuh lebih kuat melalui strategi kreatif dan inovatif.
-    </p>
-    <h3>Misi</h3>
-    <ul>
-      <li>Menyediakan solusi digital marketing yang efektif dan terukur.</li>
-      <li>Membantu bisnis otomotif membangun brand yang kuat di dunia online.</li>
-      <li>Menggabungkan kreativitas dan teknologi untuk memberikan hasil yang nyata.</li>
-      <li>Menjadi mitra jangka panjang yang mendukung perkembangan klien.</li>
-    </ul>
-  </section>
+    <!-- FILOSOFI KERJA -->
+    <section class="section dark">
+      <h2>FILOSOFI KERJA</h2>
+      <ul>
+        <li><strong>Kreativitas Berani</strong> → selalu tampil beda agar brand lebih menonjol.</li>
+        <li><strong>Profesionalisme</strong> → mengutamakan kualitas dan kepercayaan klien.</li>
+        <li><strong>Kolaborasi</strong> → bersinergi dengan klien sebagai partner.</li>
+        <li><strong>Hasil Nyata</strong> → fokus pada dampak, bukan sekadar angka.</li>
+      </ul>
+    </section>
+  </main>
 
-  <!-- FILOSOFI KERJA -->
-  <section class="section dark">
-    <h2>FILOSOFI KERJA</h2>
-    <ul>
-      <li><b>Kreativitas Berani</b> → selalu tampil beda agar brand lebih menonjol.</li>
-      <li><b>Profesionalisme</b> → mengutamakan kualitas dan kepercayaan klien.</li>
-      <li><b>Kolaborasi</b> → bersinergi dengan klien sebagai partner.</li>
-      <li><b>Hasil Nyata</b> → fokus pada dampak, bukan sekadar angka.</li>
-    </ul>
-  </section>
-
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-left">
-      <img src="/image/logo x slogan.png" alt="Nitro Media Logo">
+      <img src="/image/logo x slogan.png" alt="Nitro Media Logo" width="150" height="75">
     </div>
 
     <div class="footer-center">
-      <p>©2025 Nitro Media. All rights reserved.</p>
+      <p>&copy;2025 Nitro Media. All rights reserved.</p>
     </div>
 
     <div class="footer-right">
-      <a href="https://www.instagram.com/nitromediaa/" target="_blank" class="social-icon">
-        <img src="/image/instagram.png" alt="Instagram" width="24">
+      <a href="https://www.instagram.com/nitromediaa/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+        <img src="/image/instagram.png" alt="Instagram" width="24" height="24">
       </a>
-      <a href="mailto:nitromedia@gmail.com" class="social-icon">
-        <img src="/image/mail.png" alt="Email" width="24">
+      <a href="mailto:nitromedia@gmail.com" class="social-icon" aria-label="Send us an email">
+        <img src="/image/mail.png" alt="Email" width="24" height="24">
       </a>
-      <a href="https://wa.me/6289694899767" target="_blank" class="social-icon">
-        <img src="/image/Telephone.png" alt="WhatsApp" width="24">
+      <a href="https://wa.me/6289694899767" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Contact us on WhatsApp">
+        <img src="/image/Telephone.png" alt="WhatsApp" width="24" height="24">
       </a>
     </div>
   </footer>
@@ -134,12 +232,15 @@
       const navRight = document.querySelector('.nav-right');
       
       burgerMenu.addEventListener('click', function() {
+        const isExpanded = burgerMenu.getAttribute('aria-expanded') === 'true';
+        
         navLeft.classList.toggle('active');
         navRight.classList.toggle('active');
         burgerMenu.classList.toggle('active');
+        burgerMenu.setAttribute('aria-expanded', !isExpanded);
       });
       
-      // Tutup menu ketika klik di luar
+      // Close menu when clicking outside
       document.addEventListener('click', function(event) {
         const isClickInsideNav = event.target.closest('.nav-left') || 
                                 event.target.closest('.nav-right') ||
@@ -149,18 +250,29 @@
           navLeft.classList.remove('active');
           navRight.classList.remove('active');
           burgerMenu.classList.remove('active');
+          burgerMenu.setAttribute('aria-expanded', false);
         }
       });
 
-      // Tutup menu ketika item menu diklik
+      // Close menu when menu item is clicked
       document.querySelectorAll('.nav-left a, .nav-right a').forEach(item => {
         item.addEventListener('click', function() {
           navLeft.classList.remove('active');
           navRight.classList.remove('active');
           burgerMenu.classList.remove('active');
+          burgerMenu.setAttribute('aria-expanded', false);
         });
       });
     });
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 
 </body>

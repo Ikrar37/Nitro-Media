@@ -1,0 +1,23 @@
+=== ROBOTS.TXT ===
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nitro-media.vercel.app/sitemap.xml
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /*.pdf$
+
+# Allow all image files
+Allow: /image/
+Allow: *.png
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.gif
+Allow: *.svg
+
+# Crawl-delay (optional)
+Crawl-delay: 1

@@ -3,23 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Nitro Media</title>
+  
+  <!-- Primary Meta Tags -->
+  <title>Layanan Digital Marketing Otomotif - SEO, Social Media & Content | Nitro Media</title>
+  <meta name="title" content="Layanan Digital Marketing Otomotif - SEO, Social Media & Content | Nitro Media">
+  <meta name="description" content="Layanan lengkap digital marketing untuk industri otomotif: SEO, Social Media Management, Content Creation. Tingkatkan visibilitas dan penjualan bisnis otomotif Anda.">
+  <meta name="keywords" content="layanan digital marketing otomotif, SEO otomotif, social media management, content creation, marketing dealer mobil, promosi bengkel">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Nitro Media">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://nitro-media.vercel.app/services.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nitro-media.vercel.app/services.html">
+  <meta property="og:title" content="Layanan Digital Marketing Otomotif - SEO, Social Media & Content | Nitro Media">
+  <meta property="og:description" content="Layanan lengkap digital marketing untuk industri otomotif: SEO, Social Media Management, Content Creation. Tingkatkan visibilitas dan penjualan bisnis otomotif Anda.">
+  <meta property="og:image" content="https://nitro-media.vercel.app/image/logonitromedia.png">
+  <meta property="og:site_name" content="Nitro Media">
+  <meta property="og:locale" content="id_ID">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://nitro-media.vercel.app/services.html">
+  <meta property="twitter:title" content="Layanan Digital Marketing Otomotif - SEO, Social Media & Content | Nitro Media">
+  <meta property="twitter:description" content="Layanan lengkap digital marketing untuk industri otomotif: SEO, Social Media Management, Content Creation. Tingkatkan visibilitas dan penjualan bisnis otomotif Anda.">
+  <meta property="twitter:image" content="https://nitro-media.vercel.app/image/logonitromedia.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/image/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/image/apple-touch-icon.png">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="services.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Structured Data - Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Layanan Digital Marketing Otomotif",
+    "description": "Layanan lengkap digital marketing untuk industri otomotif termasuk SEO, Social Media Management, dan Content Creation",
+    "provider": {
+      "@type": "Organization",
+      "name": "Nitro Media",
+      "url": "https://nitro-media.vercel.app/"
+    },
+    "serviceType": "Digital Marketing",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Indonesia"
+    },
+    "hasOfferingCatalog": {
+      "@type": "OfferingCatalog",
+      "name": "Digital Marketing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO (Search Engine Optimization)",
+            "description": "Membantu website bisnis lebih mudah ditemukan di Google agar pelanggan potensial bisa menjangkau produk/jasa dengan cepat"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Social Media Management",
+            "description": "Mengelola akun media sosial secara profesional (konten, desain, copywriting, jadwal posting) agar brand lebih hidup dan interaktif"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Content Creation",
+            "description": "Membuat konten visual berkualitas tinggi yang estetik dan relevan dengan dunia otomotif untuk meningkatkan engagement"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nitro-media.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://nitro-media.vercel.app/services.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-left">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="services.html">Services</a>
+        <a href="services.html" aria-current="page">Services</a>
       </div>
 
       <div class="logo">
-        <a href="index.html">
-          <img src="/image/logonitromedia.png" alt="Nitro Media Logo">
+        <a href="index.html" aria-label="Nitro Media - Homepage">
+          <img src="/image/logonitromedia.png" alt="Nitro Media Logo" width="120" height="40">
         </a>
       </div>
 
@@ -29,58 +136,74 @@
         <a href="contact.html">Contact</a>
       </div>
       
-      <button class="burger-menu" aria-label="Toggle menu">☰</button>
+      <button class="burger-menu" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </nav>
   </header>
 
-  <!-- HERO TITLE -->
-  <section class="services-hero">
-    <h1>SERVICES</h1>
-  </section>
+  <main>
+    <!-- Breadcrumb Navigation
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Services</li>
+      </ol>
+    </nav> -->
 
-  <!-- SERVICES BOXES -->
-  <section class="services-container">
-    <div class="service-box">
-      <h2>SEO</h2>
-      <p>
-        Membantu website bisnis lebih mudah ditemukan di Google agar pelanggan potensial 
-        bisa menjangkau produk/jasa dengan cepat.
-      </p>
-    </div>
-    <div class="service-box">
-      <h2>SOCIAL MEDIA MANAGEMENT</h2>
-      <p>
-        Mengelola akun media sosial secara profesional (konten, desain, copywriting, jadwal posting) 
-        agar brand lebih hidup dan interaktif.
-      </p>
-    </div>
-    <div class="service-box">
-      <h2>CONTENT CREATION</h2>
-      <p>
-        Membuat konten visual berkualitas tinggi yang estetik dan relevan dengan dunia otomotif 
-        untuk meningkatkan engagement.
-      </p>
-    </div>
-  </section>
+    <!-- HERO TITLE -->
+    <section class="services-hero">
+      <h1>LAYANAN DIGITAL MARKETING OTOMOTIF</h1>
+      <p class="hero-description">Solusi pemasaran digital terlengkap untuk industri otomotif</p>
+    </section>
 
-  <footer>
+    <!-- SERVICES BOXES -->
+    <section class="services-container">
+      <article class="service-box">
+        <h2>SEO (Search Engine Optimization)</h2>
+        <p>
+          Membantu website bisnis lebih mudah ditemukan di Google agar pelanggan potensial 
+          bisa menjangkau produk/jasa dengan cepat. Layanan SEO kami meliputi riset keyword, 
+          optimasi on-page, link building, dan analisis kompetitor khusus untuk industri otomotif.
+        </p>
+      </article>
+      
+      <article class="service-box">
+        <h2>SOCIAL MEDIA MANAGEMENT</h2>
+        <p>
+          Mengelola akun media sosial secara profesional (konten, desain, copywriting, jadwal posting) 
+          agar brand lebih hidup dan interaktif. Kami memahami karakteristik audiens otomotif 
+          dan tren terkini untuk memaksimalkan engagement.
+        </p>
+      </article>
+      
+      <article class="service-box">
+        <h2>CONTENT CREATION</h2>
+        <p>
+          Membuat konten visual berkualitas tinggi yang estetik dan relevan dengan dunia otomotif 
+          untuk meningkatkan engagement. Tim kreatif kami menghasilkan foto, video, dan grafis 
+          yang menarik perhatian target audience.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
     <div class="footer-left">
-      <img src="/image/logo x slogan.png" alt="Nitro Media Logo">
+      <img src="/image/logo x slogan.png" alt="Nitro Media Logo" width="150" height="75">
     </div>
 
     <div class="footer-center">
-      <p>©2025 Nitro Media. All rights reserved.</p>
+      <p>&copy;2025 Nitro Media. All rights reserved.</p>
     </div>
 
     <div class="footer-right">
-      <a href="https://www.instagram.com/nitromediaa/" target="_blank" class="social-icon">
-        <img src="/image/instagram.png" alt="Instagram" width="24">
+      <a href="https://www.instagram.com/nitromediaa/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Follow us on Instagram">
+        <img src="/image/instagram.png" alt="Instagram" width="24" height="24">
       </a>
-      <a href="mailto:nitromedia@gmail.com" class="social-icon">
-        <img src="/image/mail.png" alt="Email" width="24">
+      <a href="mailto:nitromedia@gmail.com" class="social-icon" aria-label="Send us an email">
+        <img src="/image/mail.png" alt="Email" width="24" height="24">
       </a>
-      <a href="https://wa.me/6289694899767" target="_blank" class="social-icon">
-        <img src="/image/Telephone.png" alt="WhatsApp" width="24">
+      <a href="https://wa.me/6289694899767" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Contact us on WhatsApp">
+        <img src="/image/Telephone.png" alt="WhatsApp" width="24" height="24">
       </a>
     </div>
   </footer>
@@ -92,12 +215,15 @@
       const navRight = document.querySelector('.nav-right');
       
       burgerMenu.addEventListener('click', function() {
+        const isExpanded = burgerMenu.getAttribute('aria-expanded') === 'true';
+        
         navLeft.classList.toggle('active');
         navRight.classList.toggle('active');
         burgerMenu.classList.toggle('active');
+        burgerMenu.setAttribute('aria-expanded', !isExpanded);
       });
       
-      // Tutup menu ketika klik di luar
+      // Close menu when clicking outside
       document.addEventListener('click', function(event) {
         const isClickInsideNav = event.target.closest('.nav-left') || 
                                 event.target.closest('.nav-right') ||
@@ -107,18 +233,29 @@
           navLeft.classList.remove('active');
           navRight.classList.remove('active');
           burgerMenu.classList.remove('active');
+          burgerMenu.setAttribute('aria-expanded', false);
         }
       });
 
-      // Tutup menu ketika item menu diklik
+      // Close menu when menu item is clicked
       document.querySelectorAll('.nav-left a, .nav-right a').forEach(item => {
         item.addEventListener('click', function() {
           navLeft.classList.remove('active');
           navRight.classList.remove('active');
           burgerMenu.classList.remove('active');
+          burgerMenu.setAttribute('aria-expanded', false);
         });
       });
     });
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
   </script>
 
 </body>
